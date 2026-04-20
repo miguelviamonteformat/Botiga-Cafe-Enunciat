@@ -1,0 +1,122 @@
+/* La importancia de fuentes la ponemos arriba en el css */
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/Lato/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../fonts/Dancing_Script/DancingScript-SemiBold.woff2') format('woff2'),
+        url('../fonts/Dancing_Script/DancingScript-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato",Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --color_fondo_primario:#053617;
+    --color_texto_primario:white; 
+    --breakpoint_principal:1200px;
+}
+
+h1,h2{
+    font-family: 'Dancing Script';
+}
+
+h1 {
+    position: absolute;
+    color:white;
+    top:8vw;
+    right: 6vw;
+    font-size: 10vw;
+
+    @media (max-width: 450px){
+        right: 14vw;
+        font-size: 15rem;
+            
+    }
+@media (max-width: 450px){
+    right: 14vw;
+    font-size: 15rem;
+}
+
+}
+
+img{
+    width: 100%;
+}
+
+nav{
+    background-color: var(--color_fondo_primario);
+
+ul{
+    margin: 0 auto;
+    width: var(--breakpoint_principal);
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+
+    li{
+     list-style: none;
+     padding: .5rem 1rem;
+      border-top:5px solid transparent; 
+         border-bottom:5px solid transparent;
+color: var(--color_texto_primario);
+
+    &:hover{
+         border-top:5px solid var(--color_texto_primario); 
+         border-bottom:5px solid var(--color_texto_primario);
+          border-top:5px solid yellow; 
+         border-bottom:5px solid yellow;
+         color: yellow;
+        
+    } 
+
+     a{
+        color: inherit;
+        text-decoration: none;
+        font-size:1.2rem ;
+
+     }
+    };
+}
+}
+
+section > div{
+    margin: 0 auto;
+    width: var(--breakpoint_principal);
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        width: 100%
+    }
+}
+
+texto_derecha{
+   text-align: right;
+   padding-left: 2rem;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center
+
+   h2 {
+    font-size: 3.5m;
+    margin-bottom: 1em;
+   }
+   p {
+    font-size: 1.2rem;
+    margin-top: 1
